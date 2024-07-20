@@ -51,7 +51,7 @@ async def main(count: int, has_targets: bool) -> None:
         writer.writerows([header] + data)
 
     royalty_address = encode_puzzle_hash(bytes32(token_bytes(32)), "txch")
-    royalty_basis_pts = 300
+    royalty_basis_pts = 100 
     print("Royalty Address: %s" % royalty_address)
     print("Royalty Percent: %s" % royalty_basis_pts)
 

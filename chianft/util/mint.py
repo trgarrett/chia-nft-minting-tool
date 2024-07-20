@@ -453,6 +453,10 @@ class Minter:
                 for coin in sb.removals()
                 if coin.puzzle_hash == SINGLETON_LAUNCHER_PUZZLE_HASH
             ]
+
+            for launcher_id in launcher_ids:
+                print(f"nft_launcher_id: {launcher_id}")
+             
             if create_sell_offer:
                 await self.create_offer(launcher_ids, create_sell_offer)
             print("Spendbundle {} Confirmed".format(sb_index + i))
